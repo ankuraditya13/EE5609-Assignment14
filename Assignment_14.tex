@@ -1,0 +1,193 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+
+\singlespacing
+
+
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment-14}
+\author{Ankur Aditya - EE20RESCH11010}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{abstract}
+This document contains the problem related to Linear Transformations (Hoffman:- Page-106,Q-9) 
+\end{abstract}
+Download the latex-file from 
+\begin{lstlisting}
+https://github.com/ankuraditya13/EE5609-Assignment14
+\end{lstlisting}
+
+\section{Problem}
+Let $\vec{V}$ be the vector space of all $2\times 2$ matrices over the field of real numbers, and let
+\begin{align}
+\vec{B}= \myvec{2&-2\\-1&1}
+\end{align}  
+Let $\vec{W}$ be the subspace of $\vec{V}$ consisting of all $\vec{A}$ such that $\vec{AB}$=0. Let f be a linear functional on $\vec{V}$ which is an annihilator of $\vec{W}$. Suppose that f($\vec{I}$) = 0 and f($\vec{C}$) = 3, where $\vec{I}$ is the $2\times 2$ identity matrix and,
+\begin{align}
+\vec{C} = \myvec{0&0\\0&1}
+\end{align} 
+Find f($\vec{B}$)?
+\section{solution}
+The general Linear functional f on $\vec{V}$ is of the form,
+\begin{align}
+f(\vec{A}) = aA_{11}+bA_{12}+cA_{21}+dA_{22}
+\label{1}
+\end{align}
+for a,b,c,d $\in\vec{R}$
+Let $\vec{A} \in \vec{W}$ be,
+\begin{align}
+\vec{A} = \myvec{p&q\\q&s}\\
+\because \vec{AB} = 0\\
+\implies \myvec{p&q\\q&s}\myvec{2&-2\\-1&1} = 0\\
+\implies \myvec{2p-q&-2p+q\\2q-s&-2q+s} = 0
+\end{align}
+$\therefore$ q=2p and s=2q.
+Hence $\vec{W}$ consists of all matrices of the form 
+\begin{align}
+\myvec{p&2p\\q&2q}
+\end{align}
+Now V is an annihilator of W. Hence, f$\in\vec{W}^0$
+\begin{align}
+\implies f\brak{\myvec{p&2p\\q&2q}} = 0 \forall p,q \in \vec{R}
+\end{align}
+from equation \eqref{1}
+\begin{align}
+\implies ap+2bp+cq+2dq = 0 \forall p,q \in \vec{R}\\
+\implies (a+2b)p + (c+2d)q = 0, \forall p,q \in \vec{R}
+\end{align}
+Hence, b=$\frac{-1}{2}$a and d=$\frac{-1}{2}$c. Hence general $f\in\vec{W}^0$ is of the form,
+\begin{align}
+f(\vec{A}) = aA_{11}-\frac{1}{2}a A_{12}+cA_{21}-\frac{1}{2}cA_{22}
+\label{2}
+\end{align}
+Now, f($\vec{C}$) = 3 $\implies$ d =3 $\implies$ c=-6. Alos given that, f($\vec{I}$) = 0 $\implies$ a-$\frac{1}{2}$c =0 $\implies$ a=-3. Substituting the above parameters in equation \eqref{2} we get,
+\begin{align}
+\therefore f(\vec{A}) = -3A_{11}+\frac{3}{2} A_{12}-6A_{21}+3A_{22} \\
+\mbox{Now, } f(\vec{B}) = f\brak{\myvec{2&-2\\-1&1}} 
+\end{align}
+\begin{align}
+\implies f(\vec{B}) = -3(2)+\frac{3}{2}(-2)-6(-1)+3(1) = 0 
+\end{align}
+\end{document}
